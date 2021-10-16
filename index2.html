@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index2.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="side1">
+        <h2>Populate your Calendar</h2>
+        <p>
+          Populating your calendar helps users see your free and available dates
+          so they can book an appointment at their convinience.
+        </p>
+      </div>
+      <div class="side">
+        <form id="validateForm" method="post">
+          <div class="row">
+            <div class="part1">
+              <label for="titlee">Title</label>
+              <input type="text" name="fullname" id="firstName" />
+              <span class="error-block"></span>
+            </div>
+
+            <div class="part2"></div>
+              <label class="month-label">Venue:</label>
+        <select name="month" class="month">
+          <option class="place" value="" disabled selected hidden> Please Select Venue...</option>
+          <option value="jan">Virtual</option>
+          <option value="feb">Onsite(Physical Meeting)</option>
+            </div>
+
+            <div class="part3">
+              <label for="othername">Virtual Platform/Physical Loation</label>
+              <input
+                type="text"
+                name="othername"
+                id="otherName"
+                placeholder="Google Meet or 1 Adetokunbo crescent VI"
+              />
+              <span class="error-block"></span>
+            </div>
+
+          
+          <button id="btn" type="submit">SIGN UP</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/color-calendar/dist/bundle.js"></script>
+  </body>
+</html>

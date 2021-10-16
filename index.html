@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UI DESIGN</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="home">
+      <h1>My Schedule App</h1>
+      <img src="usman-yousaf-dDPnX86E0Uc-unsplash.jpg" class="profile-image" /></div>
+      <h1>Dr. Johnson Mac-Anderson</h1>
+      <h3>Consultant Surgeon: Kingsway Medical Center</h3>
+      <p class="txt">You can view my calendar below to see my available days and Schedule an appointment</p>
+    </div>
+   
+    <div>
+        <label class="month-label">Select preferred Month:</label>
+        <select name="month" class="month">
+          <option class="place" value="" disabled selected hidden> Month</option>
+          <option value="jan">January</option>
+          <option value="feb">February</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+          <option value="may">May</option>
+          <option value="june">June</option>
+          <option value="july">July</option>
+          <option value="august">August</option>
+          <option value="sept">September</option>
+          <option value="oct">October</option>
+          <option value="nov">November</option>
+          <option value="dec">December</option>
+        </select>
+        <button id="modalBtn" class="button"><span>Submit </span></button>
+    </div>
+
+    <div id="simpleModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="closeBtn">&times;</span>
+          <h2>Please fill the details for your appointment</h2>
+        </div>
+        <div class="modal-body">
+          <form id="validateForm" method="post">
+            <div class="row">
+              <div class="part1">
+                <label for="schedule-time">Schedule Time</label>
+                <input type="text" name="schedule-time" id="schedule-time" />
+                <span class="error-block"></span>
+              </div>
+
+              <div class="part2">
+                <label for="reasons">Reason for Appointment</label>
+                <select
+                  name="month"
+                  id="reasons"
+                >
+                <option value="" disabled selected hidden>Please Select Reason for Appointment</option>
+                  <option value="post-surgery">Post-Surgery Checkup</option>
+                  <option value="Pre-Surgery">Pre-Surgery Checkup</option>
+                  <option value="Surgery">Surgery Analysis</option>
+                  <option value="predeatrics">Peadeatrics</option>
+                  <option value="infant">Infant Surgical procedures</option>
+                  <option value="Consultancy">Consultancy</option>
+                </select>
+                <span class="error-block"></span>
+              </div>
+
+              <div class="part4">
+                <label for="phonenumber">Phone Number</label>
+                <input type="number" name="phonenumber" id="phoneNumber" />
+                <span class="error-block"></span>
+              </div>
+
+              <div class="part3">
+                <label for="Additional-information">Please Include Additional Information</label>
+                <textarea
+                  name="comments"
+                  id="comments"
+                  cols="35"
+                  rows="5"
+                  placeholder="Write Something...."
+                ></textarea>
+                <span class="error-block"></span>
+              </div>
+            </div>
+            <div class="formbase">
+              <input type="checkbox" name="agree" value="agree" id="agree" />
+              <label for="agree"
+                >I agree to the be available at the stipulated date and
+                time</label
+              >
+              <button id="btn" type="submit">CONFIRM</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <h3>My Schedule App</h3>
+        </div>
+      </div>
+    </div>
+<script src="modal.js"></script>
+
+  </body>
+</html>
