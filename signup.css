@@ -61,6 +61,7 @@
   cursor: pointer;
   margin: 5px;
   margin-left: 80px;
+  margin-top: 20px;
 }
 
 #button span {
@@ -68,6 +69,7 @@
   display: inline-block;
   position: relative;
   transition: 0.5s;
+  
 }
 
 #button span:after {
@@ -81,6 +83,7 @@
 
 #button:hover span {
   padding-right: 25px;
+  
 }
 
 #button:hover span:after {
