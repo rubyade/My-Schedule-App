@@ -1,3 +1,18 @@
+fetch('https://skheduler.herokuapp.com/api/appointment/616e5d41632e32cbf694de70', {
+  method: 'GET',
+}).then(response => {
+  console.log('the response with a sing id', response)
+  if (response.ok) {
+    return response.json();
+  }
+  throw new Error('Request failed!');
+}, networkError => {
+  console.log(networkError.message);
+}).then(jsonResponse => {
+  console.log(jsonResponse);
+});
+
+
 "use strict";
 
 function _classCallCheck(instance, Constructor) {
