@@ -2,8 +2,8 @@
         body {
             margin: 0px;
             background-color:  #fff;
-            background-image: url("4584.jpg");
-            background-position: left bottom;
+            background-image: url("/assets/images/4584.jpg");
+            background-position: top left;
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -11,13 +11,14 @@
         .display-5 {
             margin-top: 450px;
             color: #ff8095;
+           
         }
 
         .container {
             display: flex;
             font-family: "Roboto", sans-serif;
             justify-content: space-between;
-            margin-top: 80px;
+            margin-top: 40px;
 
         }
 
@@ -61,6 +62,7 @@
   cursor: pointer;
   margin: 5px;
   margin-left: 80px;
+  margin-top: 30px;
 }
 
 #button span {

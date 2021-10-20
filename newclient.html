@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact us Page</title>
-    <link rel="stylesheet" type="text/css" href="newclient.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/newclient.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
@@ -29,7 +29,7 @@
          book an appointment by clicking on any of the <br> coloured dates
          to book an appointment.
         </p>
-        <img src="6274.jpg" alt="waiting patients" style="max-width: 35rem;">
+        <img src="./assets/images/6274.jpg" alt="waiting patients" style="max-width: 35rem;">
       </div>
 
       <div class="side">
@@ -112,10 +112,10 @@
       <div class="modal-content" id="modal-popup">
         <div class="modal-header">
           <span class="closeBtn">&times;</span>
-          <h3 class="display-9">Kindly fill in the details for your appointment</h3>
+          <h3 class="display-9">Please fill in the details for your appointment below</h3>
         </div>
         <div class="modal-body">
-        <div class="row justify-content-center my-5">
+        <div class="row justify-content-center">
         <div class="col-lg-10">
           <form id="validateForm" method="post">
         
@@ -155,8 +155,9 @@
                   placeholder="Write Something...."
                   class="form-control"
                 ></textarea>
-              <input class="form-control mt-2" type="checkbox" name="agree" value="agree" id="agree" />
-              <label for="agree" class="form-label mt-2"
+
+              <input class="form-check-input mt-3" type="radio" name="agree" value="agree" id="agree" />
+              <label for="agree" class="form-label mt-4"
                 >I agree to the be available at the stipulated date and
                 time</label
               >
@@ -171,6 +172,6 @@
       </div>
   
 <script src="https://momentjs.com/downloads/moment-with-locales.js" type="text/javascript"></script>
- <script src="newclient.js"></script> 
+ <script src="./js/newclient.js"></script> 
 </body>
 </html>

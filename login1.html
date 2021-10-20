@@ -2,7 +2,7 @@
 <html lang="en">
 <meta charset="UTF">
 <meta name="viewport" width=device-width initial-scale=1.0>
-<link rel="stylesheet" href="login1.css">
+<link rel="stylesheet" href="./assets/css/login1.css">
 <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,14 +25,16 @@
 <body>
     <div class="container">
         <div class="first-container">
-            <h3 class="display-5 text-left ">Welcome to Scheduler!</h3>
-            <h6 class="display-10 text-left ">The easiest way to schedule appointments</h6>
-            <!-- <img src="4584.jpg" alt="scheduling" style="max-width: 50rem;"> -->
+            <h3 class="display-5">Welcome to Scheduler!</h3>
+            <h6 class="display-10">The easiest way to schedule appointments</h6>
+            <!-- <img src="./assets/images/4584.jpg" alt="scheduling" style="max-width: 50rem;"> -->
+            
+            
         </div>
         
         <div class="second-container row justify-content-center" id="side-2">
             <div class="col-lg-10">
-                <form action="">
+                <form id="form" action="" method="post">
 
             <label class="form-label mt-2 text-primary" for="email">Email Address:</label>
             <input  class="form-control" type="email" name="email" id="email">
@@ -43,7 +45,6 @@
             <button class="btn btn-block" id="button"><span>Login</span></button>
         </form>
         </div>
-    </div>
  </div>
     
     <script
@@ -51,6 +52,9 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    
+
+<script src="./js/login.js"></script>
 </body>
 
 </html>

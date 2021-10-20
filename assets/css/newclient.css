@@ -145,7 +145,7 @@ body {
   top: 0;
   height: 100%;
   font-family: "Roboto", sans-serif;
-  font-size: 22px;
+  font-size: 15px;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -172,19 +172,20 @@ width: 400px;
 .modal-footer h3 {
   margin: 0;
   padding-left: 50px;
+  font-size: 12px;
 }
 
 .modal-header {
   background: #ff8095;
   padding: 10px;
   color: white;
-  font-size: 16px;
+  
 }
 
 .display-9 {
-  font-size: 30px;
-  text-align: left;
-  margin-right: 60px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 100px;
   font-family: "Roboto", sans-serif;
 }
 
