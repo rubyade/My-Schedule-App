@@ -16,7 +16,8 @@ form.addEventListener('submit', function(e) {
                 password: password
             })
         })
-        .then(function(response) {
+        .then(function (response) {
+            location.replace("http://127.0.0.1:5501/consultant/home.html");
             return console.log(response);
         })
         .then(function(result) {
