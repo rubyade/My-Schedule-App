@@ -10,20 +10,16 @@ form.addEventListener('submit', function(e) {
             headers: {
                 "Content-Type": "application/json"
             },
-            mode: "no-cors",
             body: JSON.stringify({
                 email: email,
                 password: password
             })
         })
-        .then(function (response) {
+        .then(function(response) {
             location.replace("http://127.0.0.1:5501/consultant/home.html");
-            return console.log(response);
-        })
-        .then(function(result) {
-            alert(result);
+            console.log(response);
         })
         .catch(function(error) {
             console.log('Request failed', error)
         })
-})
+});
