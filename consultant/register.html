@@ -1,59 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/css/register.css" />
-    <title>Document</title>
-  </head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-  <body>
-    <div class="container">
-      <form id="form" action="" method="post">
-        <h3>Registration Form</h3>
-        <fieldset>
-          <input
-            placeholder="Your name"
-            id="name"
-            type="text"
-            tabindex="1"
-            required
-            autofocus
-          />
-        </fieldset>
-        <fieldset>
-          <input
-            placeholder="Your Email Address"
-            id="email"
-            type="email"
-            tabindex="2"
-            required
-          />
-        </fieldset>
-        <fieldset>
-          <select id="gender">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg " style="background-color: wheat;">
+        <a class="navbar-brand" href="/client/home.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+    </nav>
+    </button>
+    <div class="containers">
+        <form id="form" action="" method="post">
+            <h3>Registration Form</h3>
+            <fieldset>
+                <input placeholder="Your name" id="name" type="text" tabindex="1" required autofocus />
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Email Address" id="email" type="email" tabindex="2" required />
+            </fieldset>
+            <fieldset>
+                <select id="gender">
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
-        </fieldset>
-        <fieldset>
-          <input
-            placeholder="Password"
-            id="password"
-            type="tel"
-            tabindex="3"
-            required
-          />
-        </fieldset>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Password" id="password" type="tel" tabindex="3" required />
+            </fieldset>
 
-        <fieldset>
-          <button name="submit" type="submit">Submit</button>
-        </fieldset>
-      </form>
+            <fieldset>
+                <button name="submit" type="submit">Submit</button>
+            </fieldset>
+        </form>
     </div>
     <script src="../js/register.js"></script>
-  </body>
+</body>
+
 </html>
 
 <!-- 
