@@ -27,3 +27,15 @@ form.addEventListener('submit', function(e) {
             console.log('Request failed', error)
         })
 })
+
+
+
+// function fetchData() {
+//   fetch('https://skheduler.herokuapp.com/api/appointment/616e5d41632e32cbf694de70').then(response => {
+//     return response.json();
+//   }).then(data => {
+//       console.log(data)
+//     });
+// }
+
+// fetchData();

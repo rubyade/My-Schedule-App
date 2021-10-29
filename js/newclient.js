@@ -1,19 +1,48 @@
-fetch('https://skheduler.herokuapp.com/api/appointment/616e5d41632e32cbf694de70', {
-  method: 'GET',
-}).then(response => {
-  console.log('the response with a sing id', response)
-  if (response.ok) {
-    return response.json();
-  }
-  throw new Error('Request failed!');
-}, networkError => {
-  console.log(networkError.message);
-}).then(jsonResponse => {
-  console.log(jsonResponse);
-});
 
 
-"use strict";
+function fetchData() {
+  fetch(
+    "https://skheduler.herokuapp.com/api/appointment/616e5d41632e32cbf694de70"
+  )
+    .then((response) => {
+      if (!response.ok) {
+        throw Error("ERROR");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+fetchData();
+
+// fetch(
+//   "https://skheduler.herokuapp.com/api/appointment/616e5d41632e32cbf694de70",
+//   {
+//     method: "GET",
+//   }
+// )
+//   .then(
+//     (response) => {
+//       console.log("the response with a sing id", response);
+//       if (response.ok) {
+//         return response.json();
+//       }
+//       throw new Error("Request failed!");
+//     },
+//     (networkError) => {
+//       console.log(networkError.message);
+//     }
+//   )
+//   .then((jsonResponse) => {
+//     console.log(jsonResponse);
+//   });
+
+("use strict");
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -103,14 +132,14 @@ var Calendar = /*#__PURE__*/ (function () {
           });
         });
         this.update();
-      }
+      },
     },
     {
       key: "update",
       value: function update() {
         this.calendarDays = {
           first: this.month.clone().startOf("month").startOf("week").date(),
-          last: this.month.clone().endOf("month").date()
+          last: this.month.clone().endOf("month").date(),
         };
         this.monthDays = {
           lastPrevious: this.month
@@ -118,25 +147,25 @@ var Calendar = /*#__PURE__*/ (function () {
             .subtract(1, "months")
             .endOf("month")
             .date(),
-          lastCurrent: this.month.clone().endOf("month").date()
+          lastCurrent: this.month.clone().endOf("month").date(),
         };
         this.monthString = this.month.clone().format("MMMM YYYY");
         this.draw();
-      }
+      },
     },
     {
       key: "addMonth",
       value: function addMonth() {
         this.month.add(1, "month");
         this.update();
-      }
+      },
     },
     {
       key: "removeMonth",
       value: function removeMonth() {
         this.month.subtract(1, "month");
         this.update();
-      }
+      },
     },
     {
       key: "draw",
@@ -188,7 +217,7 @@ var Calendar = /*#__PURE__*/ (function () {
 
           this.bodyDivs[index].innerText = _day++;
         }
-      }
+      },
     },
     {
       key: "cleanCssClasses",
@@ -206,8 +235,8 @@ var Calendar = /*#__PURE__*/ (function () {
           this.bodyDivs[index].classList.contains("cal-day__day--selected") &&
             this.bodyDivs[index].classList.remove("cal-day__day--selected");
         }
-      }
-    }
+      },
+    },
   ]);
 
   return Calendar;
@@ -215,11 +244,6 @@ var Calendar = /*#__PURE__*/ (function () {
 
 var cal = new Calendar();
 cal.init();
-
-
-
-
-
 
 // get modal element
 var modal = document.getElementById("simpleModal");
