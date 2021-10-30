@@ -2,7 +2,7 @@
         body {
             margin: 0px;
             background-color:  #fff;
-            background-image: url("/assets/images/4584.jpg");
+            background-image: url("../images/6274.jpg");
             background-position: top left;
             background-repeat: no-repeat;
             background-size: contain;
@@ -100,10 +100,11 @@
     margin-top: 20px;
     width: 100%;
 }
+
 form{
     width: 350px;
-    margin-right: 10px;
-    margin-top: 0px;
+    margin-right: 30px;
+    margin-top: 50px;
     }
 
 
