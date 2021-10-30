@@ -118,33 +118,38 @@
                                 <div class="col-lg-10">
                                     <form id="validateForm" method="post">
 
+                                        <label class="form-label" for='name'>Full Name</label>
+                                        <input class="form-control" type='text' id='name' placeholder="e.g Joseph James" />
+
+                                        <label class="form-label" for='email'>Email</label>
+                                        <input class="form-control" type='email' id='email' />
 
                                         <label class="form-label">Reason for Appointment</label>
-                                        <select class="form-select">
-                                  <option value="" disabled selected hidden>Kindly Select an option below</option>
-                  <option value="post-surgery">Post-Surgery Checkup</option>
-                  <option value="Pre-Surgery">Pre-Surgery Checkup</option>
-                  <option value="Surgery">Surgery Analysis</option>
-                  <option value="predeatrics">Peadeatrics</option>
-                  <option value="infant">Infant Surgical procedures</option>
-                  <option value="Consultancy">Consultancy</option>
-                  </select>
+                                        <select class="form-select" id='reason'>
+                                            <option value="" disabled selected hidden>Kindly Select an option below</option>
+                                            <option value="post-surgery">Post-Surgery Checkup</option>
+                                            <option value="Pre-Surgery">Pre-Surgery Checkup</option>
+                                            <option value="Surgery">Surgery Analysis</option>
+                                            <option value="predeatrics">Peadeatrics</option>
+                                            <option value="infant">Infant Surgical procedures</option>
+                                            <option value="Consultancy">Consultancy</option>
+                                        </select>
 
                                         <label class="form-label mt-2">Time</label>
-                                        <select class="form-select">
-                <option value="" disabled selected hidden>Kindly Select an a convenient time below</option>
-                   <option>8:00</option>
-              <option>9:00</option>
-              <option>10:00</option>
-              <option>11:00</option>
-              <option>12:00</option>
-              <option>13:00</option>
-              <option>14:00</option>
-              <option>15:00</option>
-              <option>16:00</option>
-              <option>17:00</option>
-              <option>18:00</option>
-                  </select>
+                                        <select class="form-select" id='time'>
+                                            <option value="" disabled selected hidden>Kindly Select an a convenient time below</option>
+                                            <option>8:00</option>
+                                            <option>9:00</option>
+                                            <option>10:00</option>
+                                            <option>11:00</option>
+                                            <option>12:00</option>
+                                            <option>13:00</option>
+                                            <option>14:00</option>
+                                            <option>15:00</option>
+                                            <option>16:00</option>
+                                            <option>17:00</option>
+                                            <option>18:00</option>
+                                        </select>
 
                                         <label class="form-label mt-2" for="Additional-information">Please Include Additional Information</label>
                                         <textarea name="comments" id="comments" style="height:140px" ; placeholder="Write Something...." class="form-control"></textarea>
@@ -164,5 +169,6 @@
   
 <script src="https://momentjs.com/downloads/moment-with-locales.js" type="text/javascript"></script>
  <script src="../js/newclient.js"></script> 
+ <script src='../js/modal.js'></script>
 </body>
 </html>
