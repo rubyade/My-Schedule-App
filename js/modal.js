@@ -58,7 +58,17 @@ btn.addEventListener('click', async(e) => {
 
             const data = await appointment.json()
             if (data) {
-                localStorage.setItem('BookedAppointment', JSON.stringify(data))
+                let appointments = JSON.parse(localStorage.getItem('BookedAppointment'))
+                let appointmentArray
+                console.log(appointments)
+                if (appointments === null) {
+                    appointmentArray = []
+                } else {
+                    appointmentArray = appointments
+                }
+
+                appointmentArray.push(data)
+                localStorage.setItem('BookedAppointment', JSON.stringify(appointmentArray))
                 name = ''
                 email = ''
                 reason = ''

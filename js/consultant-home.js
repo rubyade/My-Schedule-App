@@ -3,7 +3,6 @@ const error = document.getElementById('error')
 
 const data = localStorage.getItem('Consultant')
 const user = JSON.parse(data)
-console.log(location)
 
 form.addEventListener("submit", function (e) {
     e.preventDefault()
