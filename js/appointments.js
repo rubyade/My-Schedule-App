@@ -19,8 +19,9 @@ async function getAppointment() {
                 <div class="col-md-4" >
                     <div class="box">
                         <div class="our-services settings text-left" >
-                            <ul><br>
+                            <ul class='pb-4'><br>
                                 <li> Date: ${user.slotPicked.day} </li>
+                                <li> Time: ${user.slotPicked.time} </li>
                                 <li> Title: ${user.title} </li>
                                 <li> Name: ${user.name} </li>
                                 <li> Email: ${user.email} </li> 
