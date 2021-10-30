@@ -1,5 +1,11 @@
 const day = document.querySelector('.cal-day__day--selected')
+const nameElement = document.querySelector('#name')
+const emailElement = document.querySelector('#email')
+const reasonElement = document.querySelector('#reason')
+const timeElement = document.querySelector('#time')
+const commentsElement = document.querySelector('#comments')
 const btn = document.querySelector('#btn')
+
 const form = document.querySelector('#validateForm').value
 
 async function fetchConsultant() {
@@ -12,15 +18,24 @@ async function fetchConsultant() {
     }
 }
 
+const resetForm = () => {
+    nameElement.value = ''
+    emailElement.value = ''
+    reasonElement.value = ''
+    timeElement.value = ''
+    commentsElement.value = ''
+}
+
 
 btn.addEventListener('click', async(e) => {
     e.preventDefault()
     
-    const name = document.querySelector('#name').value
-    const email = document.querySelector('#email').value
-    const reason = document.querySelector('#reason').value
-    const time = document.querySelector('#time').value
-    const comments = document.querySelector('#comments').value
+    let name = nameElement.value
+    let email = emailElement.value
+    let reason = reasonElement.value
+    let time = timeElement.value
+    let comments = commentsElement.value
+
     const consultant = await fetchConsultant()
     
     const requestBody = {
@@ -42,8 +57,8 @@ btn.addEventListener('click', async(e) => {
         "comment": reason
     } 
 
-    if (!(reason && time && comments)) {
-        console.log(err)
+    if (!(name && email && reason && time && comments)) {
+        alert('All fields are required')
     } else {
         const url = 'https://skheduler.herokuapp.com/api/book-appointment'
 
@@ -58,9 +73,9 @@ btn.addEventListener('click', async(e) => {
 
             const data = await appointment.json()
             if (data) {
-                let appointments = JSON.parse(localStorage.getItem('BookedAppointment'))
+                const appointments = JSON.parse(localStorage.getItem('BookedAppointment'))
                 let appointmentArray
-                console.log(appointments)
+                
                 if (appointments === null) {
                     appointmentArray = []
                 } else {
@@ -69,12 +84,8 @@ btn.addEventListener('click', async(e) => {
 
                 appointmentArray.push(data)
                 localStorage.setItem('BookedAppointment', JSON.stringify(appointmentArray))
-                name = ''
-                email = ''
-                reason = ''
-                time = ''
-                comments = ''
-                alert('Appointment confirmed')
+                alert(`Appointment confirmed. The appointment would be ${consultant.venue.type} and hold at ${consultant.venue.address} by ${time} on 29-10-2021`)
+                resetForm()
             }
             
         } catch (err) {
